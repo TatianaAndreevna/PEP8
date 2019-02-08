@@ -33,7 +33,7 @@ class Mail:
         ms.sendmail(self.login, recipients, msg.as_string())
         ms.quit()
 
-    def receive(self, document_folder='inbox', header=None):
+    def receive_message(self, document_folder='inbox', header=None):
         mail = imaplib.IMAP4_SSL(self.imap)
         mail.login(self.login, self.password)
         mail.list()
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     my_email = Mail('login@gmail.com', 'qwerty')
     my_email.send_message('Subject', ['vasya@email.com', 'petya@email.com'], 
                           'Message')
-    print(my_email.receive())
+    print(my_email.receive_message())

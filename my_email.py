@@ -11,8 +11,8 @@ SMTP_PORT = 587
 
 
 class Mail:
-    def __init__(self, login, password, smtp=PROTOCOL_SMTP, imap=PROTOCOL_IMAP,
-                 port=SMTP_PORT):
+    def __init__(self, login, password, smtp=PROTOCOL_SMTP,
+                 imap=PROTOCOL_IMAP, port=SMTP_PORT):
         self.login = login
         self.password = password
         self.smtp = smtp
